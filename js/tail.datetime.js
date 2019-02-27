@@ -139,7 +139,8 @@
         viewYears: true,
         viewMonths: true,
         viewDays: true,
-        weekStart: 0
+        weekStart: 0,
+        zIndex: 999
     };
 
     /*
@@ -558,7 +559,8 @@
             if(_s){
                 dt.style.cssText = 'position:static;visibility:visible;';
             } else {
-                dt.style.cssText = 'top:0;left:0;z-index:999;position:absolute;visibility:hidden;';
+                dt.style.cssText = 'top:0;left:0;position:absolute;visibility:hidden;'
+                                 + 'z-index:'+this.con.zIndex;
             }
             (_s || document.body).appendChild(dt);
             return dt;
