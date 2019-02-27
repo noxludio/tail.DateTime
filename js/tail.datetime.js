@@ -560,7 +560,7 @@
                 dt.style.cssText = 'position:static;visibility:visible;';
             } else {
                 dt.style.cssText = 'top:0;left:0;position:absolute;visibility:hidden;'
-                                 + 'z-index:'+this.con.zIndex;
+                                 + 'z-index:'+this.con.zIndex+';';
             }
             (_s || document.body).appendChild(dt);
             return dt;
